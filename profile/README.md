@@ -1,8 +1,8 @@
 # LARC — Lightweight Asynchronous Relay Core
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/larcjs/larc-core)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/larcjs/larc-core/blob/main/LICENSE)
-[![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](https://github.com/larcjs/larc-core)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/larcjs/core)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/larcjs/core/blob/main/LICENSE)
+[![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](https://github.com/larcjs/core)
 
 > **Build loosely-coupled, event-driven web applications** with zero build tooling
 
@@ -25,11 +25,11 @@ LARC implements the PAN (Page Area Network) messaging protocol — a framework-a
 
 | Package | Description | Version | Links |
 |---------|-------------|---------|-------|
-| **[@larcjs/core](https://github.com/larcjs/larc-core)** | Core PAN messaging bus | 1.0.0 | [NPM](https://npmjs.com/package/@larcjs/core) · [Docs](https://larcjs.github.io/larc-site/) |
-| **[@larcjs/components](https://github.com/larcjs/larc-components)** | UI components library | 1.0.0 | [NPM](https://npmjs.com/package/@larcjs/components) · [Gallery](https://larcjs.github.io/larc-site/gallery.html) |
-| **[@larcjs/devtools](https://github.com/larcjs/larc-devtools)** | Chrome DevTools extension | 1.0.0 | [Chrome Store](https://chrome.google.com/webstore) · [Docs](https://github.com/larcjs/larc-devtools) |
-| **[@larcjs/examples](https://github.com/larcjs/larc-examples)** | Examples & demo apps | 1.0.0 | [Examples](https://larcjs.github.io/larc-examples/) · [Apps](https://github.com/larcjs/larc-examples/tree/main/apps) |
-| **[@larcjs/site](https://github.com/larcjs/larc-site)** | Documentation website | 1.0.0 | [Live Site](https://larcjs.github.io/larc-site/) |
+| **[@larcjs/core](https://github.com/larcjs/core)** | Core PAN messaging bus | 1.0.0 | [NPM](https://npmjs.com/package/@larcjs/core) · [Docs](https://larcjs.github.io/site/) |
+| **[@larcjs/components](https://github.com/larcjs/components)** | UI components library | 1.0.0 | [NPM](https://npmjs.com/package/@larcjs/components) · [Gallery](https://larcjs.github.io/site/gallery.html) |
+| **[@larcjs/devtools](https://github.com/larcjs/devtools)** | Chrome DevTools extension | 1.0.0 | [Chrome Store](https://chrome.google.com/webstore) · [Docs](https://github.com/larcjs/devtools) |
+| **[@larcjs/examples](https://github.com/larcjs/examples)** | Examples & demo apps | 1.0.0 | [Examples](https://larcjs.github.io/examples/) · [Apps](https://github.com/larcjs/examples/tree/main/apps) |
+| **[@larcjs/site](https://github.com/larcjs/site)** | Documentation website | 1.0.0 | [Live Site](https://larcjs.github.io/site/) |
 
 ---
 
@@ -85,11 +85,11 @@ Add interactive components to existing pages without framework rewrites.
 
 ## 📚 Documentation
 
-- **[Getting Started](https://larcjs.github.io/larc-site/)** — Quick introduction
-- **[API Reference](https://larcjs.github.io/larc-site/docs/API_REFERENCE.html)** — Complete API docs
-- **[Examples](https://larcjs.github.io/larc-examples/)** — 30+ progressive examples
-- **[Component Gallery](https://larcjs.github.io/larc-site/gallery.html)** — Visual showcase
-- **[Architecture Guide](https://larcjs.github.io/larc-site/docs/LARC_SPEC.v0.html)** — System design
+- **[Getting Started](https://larcjs.github.io/site/)** — Quick introduction
+- **[API Reference](https://larcjs.github.io/site/docs/API_REFERENCE.html)** — Complete API docs
+- **[Examples](https://larcjs.github.io/examples/)** — 30+ progressive examples
+- **[Component Gallery](https://larcjs.github.io/site/gallery.html)** — Visual showcase
+- **[Architecture Guide](https://larcjs.github.io/site/docs/LARC_SPEC.v0.html)** — System design
 
 ---
 
@@ -124,8 +124,8 @@ The todo list publishes `todo.add` messages. The provider listens and updates st
 ### Clone a Package
 
 ```bash
-git clone https://github.com/larcjs/larc-core.git
-cd larc-core
+git clone https://github.com/larcjs/core.git
+cd core
 npm install
 npm test
 ```
@@ -193,9 +193,9 @@ All packages are licensed under the MIT License. See individual repositories for
 
 ## 🆘 Support
 
-- 📖 [Documentation](https://larcjs.github.io/larc-site/)
+- 📖 [Documentation](https://larcjs.github.io/site/)
 - 💬 [Discussions](https://github.com/orgs/larcjs/discussions)
-- 🐛 [Issue Tracker](https://github.com/larcjs/larc-core/issues)
+- 🐛 [Issue Tracker](https://github.com/larcjs/core/issues)
 - 📧 [Email](mailto:support@larc.dev)
 
 ---
@@ -204,10 +204,10 @@ All packages are licensed under the MIT License. See individual repositories for
 
 Check out full-featured applications built with LARC:
 
-- **[Invoice Studio](https://github.com/larcjs/larc-examples/tree/main/apps/invoice-studio)** — Professional invoice creation
-- **[Contact Manager](https://github.com/larcjs/larc-examples/tree/main/apps/contact-manager)** — CRUD with data grid
-- **[Data Browser](https://github.com/larcjs/larc-examples/tree/main/apps/data-browser)** — Generic data exploration
-- **[Markdown Notes](https://github.com/larcjs/larc-examples/tree/main/apps/markdown-notes)** — Note-taking with live preview
+- **[Invoice Studio](https://github.com/larcjs/examples/tree/main/apps/invoice-studio)** — Professional invoice creation
+- **[Contact Manager](https://github.com/larcjs/examples/tree/main/apps/contact-manager)** — CRUD with data grid
+- **[Data Browser](https://github.com/larcjs/examples/tree/main/apps/data-browser)** — Generic data exploration
+- **[Markdown Notes](https://github.com/larcjs/examples/tree/main/apps/markdown-notes)** — Note-taking with live preview
 
 ---
 
