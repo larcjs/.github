@@ -15,7 +15,19 @@ LARC implements the PAN (Page Area Network) messaging protocol — a framework-a
 
 **Web Components are silos. PAN connects them.**
 
-Web standards give you 80% (Custom Elements, Shadow DOM). **PAN provides the missing 20%** — component coordination, auto-loading, and state management.
+### Why Now?
+
+React, Angular, and Vue solved 2013–2017 problems: reactive updates, component composition, and virtual DOM optimization. But **modern browsers + Web Components + standards** now handle much of that natively.
+
+**Web Components promised true code reuse** — write once, use anywhere. But they became **tightly coupled silos** instead. Without a standard way to communicate, every component needed custom integration code, props drilling, or framework-specific wiring. **Web Components never lived up to their promise** because the missing piece was always communication.
+
+LARC solves **"the last 20%"** that standards alone don't address:
+
+- **Cross-component messaging** — Coordinate without tight coupling or props drilling
+- **Cross-context communication** — Seamlessly connect tabs, workers, and iframes
+- **Loose coupling & composability** — No build step, no bundler ceremony, pure coordination
+
+Web standards give you 80% (Custom Elements, Shadow DOM, ES Modules). **PAN provides the missing 20%** — the standardized communication layer that makes components actually work together as a system, finally delivering on the original Web Components promise.
 
 Without PAN, every component needs custom integration code. With PAN, components coordinate via standardized messages without knowing about each other.
 
@@ -26,8 +38,8 @@ Without PAN, every component needs custom integration code. With PAN, components
 - 🚀 **Zero Build Required** — Drop-in `<pan-bus>` element, no bundler needed
 - 🎯 **Lightweight** — 5KB core, components load on demand
 - 🔌 **Framework Complement** — Reduce React/Vue overhead by 60%+
-- ⚡ **High Performance** — 300k+ messages/second, 261 tests passing
-- 🔒 **Production Ready** — TypeScript support, comprehensive testing, security audited
+- ⚡ **High Performance** — 300k+ messages/second* (tested on MacBook Pro 16" M4, YMMV), 261 tests passing
+- 🔒 **Production Ready** — TypeScript support, comprehensive testing, developed with security in mind (self-audited)
 - 🛠️ **DevTools** — Chrome extension for debugging message flows
 
 ---
