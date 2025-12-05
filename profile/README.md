@@ -39,7 +39,6 @@ LARC embraces this reality. Instead of abstracting the platform away, it **ampli
   <script type="module" src="https://unpkg.com/@larcjs/core@1.1.1/src/pan.mjs"></script>
 </head>
 <body>
-  <pan-bus></pan-bus>
   <pan-router></pan-router>
   <pan-auth></pan-auth>
   <my-app></my-app>
@@ -48,6 +47,8 @@ LARC embraces this reality. Instead of abstracting the platform away, it **ampli
 ```
 
 No build step. No package.json. No node_modules. Just an HTML file and browser standards.
+
+> **Note:** The PAN bus is automatically instantiated when you load `pan.mjs` — no `<pan-bus>` tag needed!
 
 ### When to Use LARC
 
@@ -70,7 +71,7 @@ LARC complements your existing tools. Use it to reduce overhead, or go all-in an
 
 ## 🌟 Key Features
 
-- 🚀 **Zero Build Required** — Drop-in `<pan-bus>` element, no bundler needed
+- 🚀 **Zero Build Required** — Drop-in `<script>` tag, no bundler needed
 - 🎯 **Lightweight** — 5KB core, components load on demand
 - 🔌 **Framework Complement** — Reduce React/Vue overhead by 60%+
 - ⚡ **High Performance** — 300k+ messages/second* (tested on MacBook Pro 16" M4, YMMV), 261 tests passing
@@ -105,8 +106,7 @@ LARC complements your existing tools. Use it to reduce overhead, or go all-in an
   <script type="module" src="https://unpkg.com/@larcjs/core@1.1.1/src/pan.mjs"></script>
 </head>
 <body>
-  <!-- Components load automatically -->
-  <pan-bus></pan-bus>
+  <!-- Components load automatically, PAN bus is ready -->
   <pan-card title="Hello World">
     <p>Components communicate via PAN messages</p>
   </pan-card>
@@ -173,8 +173,6 @@ Sync state across tabs, iframes, and WebSockets with built-in cross-context mess
   <script type="module" src="https://unpkg.com/@larcjs/core@1.1.1/src/pan.mjs"></script>
 </head>
 <body>
-  <pan-bus></pan-bus>
-
   <!-- This publishes theme changes -->
   <pan-theme-toggle></pan-theme-toggle>
 
@@ -204,7 +202,6 @@ Mix React, Vue, and LARC on the same page:
 <div id="vue-filters"></div>
 
 <!-- LARC components for everything else -->
-<pan-bus></pan-bus>
 <pan-header></pan-header>
 <pan-sidebar></pan-sidebar>
 <pan-data-table></pan-data-table>
