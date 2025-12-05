@@ -5,31 +5,36 @@
 [![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](https://github.com/larcjs/core)
 [![Tests](https://img.shields.io/badge/tests-261%20passing-brightgreen.svg)](https://github.com/larcjs/core)
 
-> **Reduce framework overhead by 60%** with Web Components + PAN messaging
+> **Mix React, Vue, and vanilla components on the same page — with zero coupling.**
 
-LARC implements the PAN (Page Area Network) messaging protocol — a framework-agnostic message bus that enables seamless communication between components. Mix React, Vue, and LARC on the same page without tight coupling.
+LARC provides the missing piece that makes Web Components actually composable: a lightweight message bus (PAN) that lets components coordinate without knowing about each other. Drop it into existing projects to reduce framework overhead by 60%, or use it to build framework-free apps that are just HTML, CSS, and Web Components.
 
 ---
 
-## 💡 The PAN Philosophy
+## 💡 The Problem LARC Solves
 
-**Web Components are silos. PAN connects them.**
+### You want components that work everywhere. But integration is painful.
+
+React components don't talk to Vue components. Web Components need custom glue code. Props drilling gets messy. Global state creates coupling. You end up choosing one framework and living with vendor lock-in, or writing mountains of integration code.
+
+### What if components could coordinate without knowing about each other?
+
+That's what LARC's PAN (Page Area Network) protocol provides — **a standardized message bus for the browser**. Components publish and subscribe to topics. No tight coupling. No props drilling. No framework lock-in.
+
+Think of it like the CAN bus in your car: components broadcast what they're doing, and interested parties listen. Simple. Decoupled. Composable.
 
 ### Why Now?
 
-React, Angular, and Vue solved 2013–2017 problems: reactive updates, component composition, and virtual DOM optimization. But **modern browsers + Web Components + standards** now handle much of that natively.
+Modern browsers finally have everything needed for component-based development: Custom Elements, Shadow DOM, ES Modules. React and Vue solved crucial problems (reactivity, composition, virtual DOM), but now much of that is handled natively.
 
-**Web Components promised true code reuse** — write once, use anywhere. But they became **tightly coupled silos** instead. Without a standard way to communicate, every component needed custom integration code, props drilling, or framework-specific wiring. **Web Components never lived up to their promise** because the missing piece was always communication.
+What's still missing is **coordination**. LARC complements your existing stack by providing:
 
-LARC solves **"the last 20%"** that standards alone don't address:
+- **Cross-component messaging** — Coordinate without tight coupling
+- **Cross-context communication** — Sync state across tabs, workers, and iframes
+- **Framework interop** — Mix React, Vue, and vanilla components seamlessly
+- **Zero build requirement** — Drop-in `<script>` tag, no bundler needed
 
-- **Cross-component messaging** — Coordinate without tight coupling or props drilling
-- **Cross-context communication** — Seamlessly connect tabs, workers, and iframes
-- **Loose coupling & composability** — No build step, no bundler ceremony, pure coordination
-
-Web standards give you 80% (Custom Elements, Shadow DOM, ES Modules). **PAN provides the missing 20%** — the standardized communication layer that makes components actually work together as a system, finally delivering on the original Web Components promise.
-
-Without PAN, every component needs custom integration code. With PAN, components coordinate via standardized messages without knowing about each other.
+Use LARC to reduce framework overhead in existing apps, or build entirely framework-free with just Web Components + PAN. Either way, your components become truly reusable across any project.
 
 ---
 
