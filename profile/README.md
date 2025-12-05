@@ -5,36 +5,66 @@
 [![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](https://github.com/larcjs/core)
 [![Tests](https://img.shields.io/badge/tests-261%20passing-brightgreen.svg)](https://github.com/larcjs/core)
 
-> **Mix React, Vue, and vanilla components on the same page — with zero coupling.**
+> **Build serious web applications with just a `<script>` tag and Web Components.**
 
-LARC provides the missing piece that makes Web Components actually composable: a lightweight message bus (PAN) that lets components coordinate without knowing about each other. Drop it into existing projects to reduce framework overhead by 60%, or use it to build framework-free apps that are just HTML, CSS, and Web Components.
+LARC is a message bus architecture for the browser inspired by automotive CAN bus systems. Components communicate through a shared PAN (Page Area Network) without knowing about each other — no tight coupling, no props drilling, no global state management complexity. Drop one script include into an HTML file and start building with native Web Components, ES modules, and browser standards. No build process required.
 
 ---
 
-## 💡 The Problem LARC Solves
+## 💡 What Makes LARC Different
 
-### You want components that work everywhere. But integration is painful.
+### It's an architecture, not a framework
 
-React components don't talk to Vue components. Web Components need custom glue code. Props drilling gets messy. Global state creates coupling. You end up choosing one framework and living with vendor lock-in, or writing mountains of integration code.
+Most web tools give you components or state management or routing. LARC gives you a **communication pattern** — a message bus inspired by the CAN bus in cars. Components broadcast what they're doing. Other components listen if they care. Nobody needs to know who else exists.
 
-### What if components could coordinate without knowing about each other?
+This single pattern solves coordination problems across your entire application:
 
-That's what LARC's PAN (Page Area Network) protocol provides — **a standardized message bus for the browser**. Components publish and subscribe to topics. No tight coupling. No props drilling. No framework lock-in.
+- **Component communication** — Publish/subscribe instead of props drilling
+- **State management** — Distributed state without centralized stores
+- **Cross-context messaging** — Sync tabs, workers, and iframes automatically
+- **Framework interop** — React, Vue, and vanilla components all speak PAN
+- **Loose coupling** — Change, add, or remove components without cascade effects
 
-Think of it like the CAN bus in your car: components broadcast what they're doing, and interested parties listen. Simple. Decoupled. Composable.
+### The Browser is the Platform
 
-### Why Now?
+Modern browsers have everything needed for serious app development: Custom Elements, Shadow DOM, ES Modules, async/await, IndexedDB, WebSockets, Service Workers. These aren't experimental — they're standardized, fast, and universal.
 
-Modern browsers finally have everything needed for component-based development: Custom Elements, Shadow DOM, ES Modules. React and Vue solved crucial problems (reactivity, composition, virtual DOM), but now much of that is handled natively.
+LARC embraces this reality. Instead of abstracting the platform away, it **amplifies what's already there**:
 
-What's still missing is **coordination**. LARC complements your existing stack by providing:
+```html
+<!-- This is a complete LARC application -->
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module" src="https://unpkg.com/@larcjs/core@1.1.1/src/pan.mjs"></script>
+</head>
+<body>
+  <pan-bus></pan-bus>
+  <pan-router></pan-router>
+  <pan-auth></pan-auth>
+  <my-app></my-app>
+</body>
+</html>
+```
 
-- **Cross-component messaging** — Coordinate without tight coupling
-- **Cross-context communication** — Sync state across tabs, workers, and iframes
-- **Framework interop** — Mix React, Vue, and vanilla components seamlessly
-- **Zero build requirement** — Drop-in `<script>` tag, no bundler needed
+No build step. No package.json. No node_modules. Just an HTML file and browser standards.
 
-Use LARC to reduce framework overhead in existing apps, or build entirely framework-free with just Web Components + PAN. Either way, your components become truly reusable across any project.
+### When to Use LARC
+
+**You'll love LARC if:**
+- You want to escape build pipeline complexity
+- You're building component libraries that work everywhere
+- You need micro-frontends without framework conflicts
+- You value simplicity and web standards
+- You want apps that load instantly without massive bundles
+
+**You might want something else if:**
+- You need React's ecosystem for a specific use case (you can still mix them!)
+- Your team is deeply invested in Vue/Angular workflows
+- You're building a traditional server-rendered app
+- You prefer opinionated, all-in-one frameworks
+
+LARC complements your existing tools. Use it to reduce overhead, or go all-in and build framework-free. Either way works.
 
 ---
 
